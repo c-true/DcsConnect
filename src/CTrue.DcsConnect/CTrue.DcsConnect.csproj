@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Google.Protobuf" />
+		<PackageReference Include="Grpc.Core" />
+		<PackageReference Include="Grpc.Tools">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="RurouniJones.Dcs.Grpc" />
+	</ItemGroup>
+
+	<PropertyGroup Label="Package">
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>Library for integrations with DCS using gRPC.</Description>
+		<PackageTags>DCS Digital Combat Simulator</PackageTags>
+		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+	</PropertyGroup>
+
+</Project>
