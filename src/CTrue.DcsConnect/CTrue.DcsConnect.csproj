@@ -21,9 +21,4 @@
 		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Spectre.Console" />
-		<PackageReference Include="Spectre.Console.Cli" />
-	</ItemGroup>
-
 </Project>
