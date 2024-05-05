@@ -4,6 +4,12 @@ using System.Security.Cryptography.X509Certificates;
 using CTrue.DcsConnect;
 using RurouniJones.Dcs.Grpc.V0.Mission;
 
+if (args.Length == 0)
+{
+    Console.WriteLine("Usage: DcsConsole <server_name>");
+    return;
+}
+
 DcsConnector dcsConnect = new DcsConnector(new MyLogProvider());
 dcsConnect.ConnectionStatusChanged += (sender, eventArgs) => Console.WriteLine("Connected");
 
@@ -19,7 +25,7 @@ dcsConnect.SubscribeEventUpdates(eventHandler);
 
 string serverAddr = args[0];
 
-dcsConnect.Connect(serverAddr, 50051, "ConsoleApp");
+dcsConnect.Connect(serverAddr, 50051, "DcsConsole");
 
 Console.ReadKey();
 dcsConnect.Units.ForEach(x => Console.WriteLine(x.Callsign));
