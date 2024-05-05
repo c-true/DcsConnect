@@ -27,3 +27,5 @@ jobs:
       working-directory: src
     - name: Publish the package to GPR
       run: dotnet nuget push src/CTrue.DcsConnect/bin/Release/*.nupkg -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/c-true/index.json
+    - name: Publish the package to NuGet
+      run: dotnet nuget push src/CTrue.DcsConnect/bin/Release/*.nupkg -k ${{ secrets.NUGET_ORG_API_KEY }} -s https://api.nuget.org/v3/index.json
