@@ -27,4 +27,3 @@ jobs:
       working-directory: src
     - name: Publish the package to GPR
       run: dotnet nuget push artifacts/packages/*.nupkg -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/c-true/index.json
-      working-directory: src
