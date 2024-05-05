@@ -4,6 +4,8 @@ using System.Security.Cryptography.X509Certificates;
 using CTrue.DcsConnect;
 using RurouniJones.Dcs.Grpc.V0.Mission;
 
+Console.WriteLine("C-True DCS Console");
+
 if (args.Length == 0)
 {
     Console.WriteLine("Usage: DcsConsole <server_name>");
